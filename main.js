@@ -1,7 +1,5 @@
 "use strict"
 
-document.getElementById('coffee-name-search').addEventListener("keyup", updateCoffees);
-
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
@@ -22,11 +20,15 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
+    console.log(e);
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    let searchedCoffee = searchBox.value;
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } if (coffee.name === searchedCoffee) {
             filteredCoffees.push(coffee);
         }
     });
@@ -55,6 +57,10 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+let searchBox = document.getElementById('coffee-name-search');
+
+
 tbody.innerHTML = renderCoffees(coffees);
 
+searchBox.addEventListener("keyup", updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
