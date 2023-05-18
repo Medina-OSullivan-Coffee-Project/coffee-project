@@ -1,5 +1,8 @@
 "use strict"
 
+document.getElementById('coffee-name-search').addEventListener("keyup", updateCoffees);
+
+
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
