@@ -31,11 +31,11 @@ if (tbody && roastSelection && searchBox && addCoffeeButton) {
 }
 
 function renderCoffee(coffee) {
-	let html = '<div class="coffee">';
-	html += '<div>ID: ' + coffee.id + '</div>';
-	html += '<div>Name: ' + coffee.name + '</div>';
-	html += '<div>Roast: ' + coffee.roast + '</div>';
-	html += '</div>';
+	let html = '<tr class="coffee">';
+	html += '<td>' + coffee.id + '</td>';
+	html += '<td>' + coffee.name + '</td>';
+	html += '<td>' + coffee.roast + '</td>';
+	html += '</tr>';
 
 	return html;
 }
@@ -64,12 +64,12 @@ function updateCoffees() {
 function addCoffee(event) {
 	event.preventDefault();
 
-	let coffeeNameInput = document.getElementById('add-coffee');
-	let selectedRoast = document.getElementById('roast-selection-add').value;
-	let newCoffeeName = coffeeNameInput.value.trim();
+	const coffeeNameInput = document.getElementById('add-coffee');
+	const selectedRoast = document.getElementById('roast-selection-add').value;
+	const newCoffeeName = coffeeNameInput.value.trim();
 
 	if (newCoffeeName !== '') {
-		let newCoffee = {
+		const newCoffee = {
 			id: coffees.length + 1,
 			name: newCoffeeName,
 			roast: selectedRoast
