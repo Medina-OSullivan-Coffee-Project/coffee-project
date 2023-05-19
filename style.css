@@ -2,7 +2,7 @@
     --bs-darkbrown: #D8B4A5;
     --main-text-color: #6A312E;
     --navbar-bg: #776E60;
-
+    --card-desc: #FCE8C6;
 }
 
 body.BG{
@@ -18,10 +18,20 @@ body.BG{
     color: var(--bs-darkbrown);
 }
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
+.card {
+    width: 250px;
+    height: 500px;
+    margin: 10px;
+
+}
+
 
 #search-button {
     background-color: #D8B4A5;
@@ -35,9 +45,4 @@ table {
 #add-coffee-button{
     background-color: var(--navbar-bg);
 
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
 }

@@ -1,20 +1,20 @@
 "use strict"
 
 let coffees = [
-	{ id: 1, name: 'Light City', roast: 'light' },
-	{ id: 2, name: 'Half City', roast: 'light' },
-	{ id: 3, name: 'Cinnamon', roast: 'light' },
-	{ id: 4, name: 'City', roast: 'medium' },
-	{ id: 5, name: 'American', roast: 'medium' },
-	{ id: 6, name: 'Breakfast', roast: 'medium' },
-	{ id: 7, name: 'High', roast: 'dark' },
-	{ id: 8, name: 'Continental', roast: 'dark' },
-	{ id: 9, name: 'New Orleans', roast: 'dark' },
-	{ id: 10, name: 'European', roast: 'dark' },
-	{ id: 11, name: 'Espresso', roast: 'dark' },
-	{ id: 12, name: 'Viennese', roast: 'dark' },
-	{ id: 13, name: 'Italian', roast: 'dark' },
-	{ id: 14, name: 'French', roast: 'dark' },
+	{ id: 1, name: 'Light City', roast: 'light', desc: 'lighter than Medium City roasts' },
+	{ id: 2, name: 'Half City', roast: 'light', desc: 'lighter than Medium City roasts' },
+	{ id: 3, name: 'Cinnamon', roast: 'light', desc: 'this refers to the colour of the beans and not the spice’s aroma or flavour'},
+	{ id: 4, name: 'City', roast: 'medium', desc: 'the earliest palatable stage that the roast process can be stopped and result in good quality coffee' },
+	{ id: 5, name: 'American', roast: 'medium', desc: 'this roast is traditionally associated with the USA' },
+	{ id: 6, name: 'Breakfast', roast: 'medium', desc: 'the dark medium roast often seen in diners' },
+	{ id: 7, name: 'High', roast: 'dark', desc: 'a few degrees further along in the roasting process than our Continental' },
+	{ id: 8, name: 'Continental', roast: 'dark', desc: 'the first in line in the scale of medium to dark roasts'},
+	{ id: 9, name: 'New Orleans', roast: 'dark', desc: 'this US city is known for its typically dark roasts'},
+	{ id: 10, name: 'European', roast: 'dark', desc: 'a type of dark-roasted coffee that is known for its intense flavor and aroma'},
+	{ id: 11, name: 'Espresso', roast: 'dark', desc: 'a full-flavored, concentrated form of coffee that is served in a shot'},
+	{ id: 12, name: 'Viennese', roast: 'dark', desc: 'a medium-dark roast that is roasted to mid-second crack'},
+	{ id: 13, name: 'Italian', roast: 'dark', desc: 'this roast is darker than a French roast' },
+	{ id: 14, name: 'French', roast: 'dark', desc: 'this is a roast that’s progressed well beyond second crack' },
 ];
 // line 20 selects the tbody element with class of coffees and is used to display the data
 let tbody = document.querySelector('#coffees');
@@ -34,14 +34,17 @@ if (tbody && roastSelection && searchBox && addCoffeeButton) {
 }
 //generates an HTML string representing a table row with the coffee details
 function renderCoffee(coffee) {
-	let html = '<tr class="coffee">';
-	html += '<td>' + coffee.id + '</td>';
-	html += '<td>' + coffee.name + '</td>';
-	html += '<td>' + coffee.roast + '</td>';
-	html += '</tr>';
+	let html = '<div class="card" style="background: var(--navbar-bg)">';
+	html += '<div class="card-body">';
+	html += '<h5 class="card-title" style="color: var(--card-desc)">' + coffee.name + '</h5>';
+	html += '<h5 class="card-subtitle mb-2" style="color: var(--main-text-color)">' + coffee.roast + " roast " + '</h5>';
+	html += '<h6 class="card-subtitle mb-2" style="color: var(--bs-darkbrown)">' + coffee.desc + '</h6>';
+	html += '</div>';
+	html += '</div>';
 
 	return html;
 }
+
 
 // iterates over the array and calls renderCoffee for each coffee object and concatenates the resulting HTML strings
 function renderCoffees(coffees) {

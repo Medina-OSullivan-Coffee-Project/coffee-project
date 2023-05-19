@@ -45,24 +45,14 @@
 
 <!-- COFFEE SEARCH AND CARD DISPLAY -->
 
-<h1 class="d-flex justify-content-center">Come enjoy some of our best java</h1>
+<!--<div class="container">-->
+<!--<img src="coffee-header%20copy.png" class="img-fluid max-width: 100% height: auto">-->
+
+</div>
+<h1 class="d-flex justify-content-center m-4">Come Enjoy Some of Our Best Java</h1>
 
 <div class="container text-center">
 	<div class="row">
-		<div class="col-lg-6 search-results">
-			<div>
-				<table>
-					<thead>
-					<tr>
-						<th>ID</th>
-						<th>NAME</th>
-						<th>ROAST</th>
-					</tr>
-					</thead>
-					<tbody id="coffees"></tbody>
-				</table>
-			</div>
-		</div>
 
 		<!-- COFFEE SEARCH INPUT -->
 
@@ -103,6 +93,17 @@
 					</div>
 					<button id="add-coffee-button" type="submit" class="btn">Add Coffee</button>
 				</form>
+			</div>
+		</div>
+
+		<!-- COFFEE SEARCH RESULTS -->
+
+		<div class="col-lg-6 search-results">
+			<div>
+				<div id="coffee-container" class="card-container">
+					<div id="coffees"></div>
+				</div>
+
 			</div>
 		</div>
 	</div>
