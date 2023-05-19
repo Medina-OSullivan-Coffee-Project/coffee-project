@@ -5,6 +5,9 @@
     --card-desc: #FCE8C6;
     --search-bg: #cb9680;
 }
+body{
+    min-width: 375px
+}
 
 body.BG{
     color: var(--main-text-color);
@@ -12,30 +15,21 @@ body.BG{
 }
 .navbar {
     background-color: var(--navbar-bg);
-    /*color: var(--bs-darkbrown);*/
 }
 
 .nav-link {
     color: var(--bs-darkbrown);
 }
 
-/*.header-image{*/
-/*    display: flex;*/
-/*}*/
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+.my-card {
+    color: var(--navbar-bg);
+    margin: .25em;
 }
 
-.card {
-    width: 250px;
-    height: 500px;
-    margin: 10px;
+#indv-card{
+    background-color: var(--navbar-bg);
+    margin: 15px 0 15px 40px;
 }
-
 
 #search-button {
     background-color: #D8B4A5;
