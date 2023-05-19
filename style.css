@@ -1,11 +1,40 @@
-body {
+:root {
+    --bs-darkbrown: #D8B4A5;
+    --main-text-color: #6A312E;
+    --navbar-bg: #776E60;
 
-    color: #6A312E;
+}
+
+body.BG{
+    color: var(--main-text-color);
+    background-color: var(--bs-darkbrown);
+}
+.navbar {
+    background-color: var(--navbar-bg);
+    /*color: var(--bs-darkbrown);*/
+}
+
+.nav-link {
+    color: var(--bs-darkbrown);
 }
 
 table {
     border-collapse: collapse;
     margin: 15px 0;
+}
+
+#search-button {
+    background-color: #D8B4A5;
+    color: var(--main-text-color);
+}
+
+#search-coffee-button{
+    background-color: var(--navbar-bg);
+}
+
+#add-coffee-button{
+    background-color: var(--navbar-bg);
+
 }
 
 td, th {
