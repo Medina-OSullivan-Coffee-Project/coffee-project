@@ -16,11 +16,9 @@ let coffees = [
 	{ id: 13, name: 'Italian', roast: 'dark', desc: 'this roast is darker than a French roast' },
 	{ id: 14, name: 'French', roast: 'dark', desc: 'a roast progressed well beyond second crack' },
 ];
-// line 20 selects the tbody element with class of coffees and is used to display the data
+
 let tbody = document.querySelector('#coffees');
-// Line 22 selects the dropdown menu
 let roastSelection = document.querySelector('#roast-selection');
-// Line 24 selects the element with ID of searchbox and assigns it to the searchbox variable
 let searchBox = document.querySelector('#searchBox');
 let addCoffeeButton = document.querySelector('#add-coffee-button');
 
@@ -67,6 +65,8 @@ function updateCoffees() {
 	});
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
 // addCoffee function is called when the add coffee button is clicked. it prevents the default form submission behavior. It retrieves the input values for the new coffee name and selected roast and creates a new coffee object which is then added to the coffees array and updates the tbody.
 function addCoffee(event) {
 	event.preventDefault();
