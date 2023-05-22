@@ -21,6 +21,10 @@ body.BG{
     color: var(--bs-darkbrown);
 }
 
+.big-coffee{
+    background-color: var(--search-bg);
+}
+
 .my-card {
     color: var(--navbar-bg);
     margin: .25em;
